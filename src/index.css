@@ -7,12 +7,17 @@
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
+  color-scheme: dark light;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+/* 기본값을 다크모드로 설정 */
+html {
+  @apply dark;
 }
 
 * {
@@ -25,6 +30,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  @apply bg-gray-900 text-white;
 }
 
 #root {
@@ -33,21 +39,36 @@ body {
   text-align: left;
 }
 
-/* 스크롤바 스타일링 */
+/* 타이핑 커서 애니메이션 */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.typing-cursor {
+  animation: blink 1s infinite;
+}
+
+/* 스크롤바 스타일링 - 다크/라이트 모드 분리 */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-100 dark:bg-gray-800;
+  background-color: rgb(31 41 55); /* gray-800 */
+}
+
+html:not(.dark) ::-webkit-scrollbar-track {
+  background-color: rgb(243 244 246); /* gray-100 */
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-purple-500 rounded-full;
+  background-color: rgb(168 85 247); /* purple-500 */
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-purple-600;
+  background-color: rgb(147 51 234); /* purple-600 */
 }
 
 /* 부드러운 스크롤 */
@@ -55,7 +76,73 @@ html {
   scroll-behavior: smooth;
 }
 
+/* light 모드 (다크모드가 아닐 때) */
+html:not(.dark) body {
+  @apply bg-white text-gray-900;
+}
+
 /* 다크모드 전환 애니메이션 */
 * {
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* light 클래스 유틸리티 정의 */
+@layer utilities {
+  html:not(.dark) .light\:bg-white {
+    background-color: rgb(255 255 255);
+  }
+  html:not(.dark) .light\:bg-gray-50 {
+    background-color: rgb(249 250 251);
+  }
+  html:not(.dark) .light\:bg-gray-100 {
+    background-color: rgb(243 244 246);
+  }
+  html:not(.dark) .light\:bg-gray-200 {
+    background-color: rgb(229 231 235);
+  }
+  html:not(.dark) .light\:text-gray-900 {
+    color: rgb(17 24 39);
+  }
+  html:not(.dark) .light\:text-gray-700 {
+    color: rgb(55 65 81);
+  }
+  html:not(.dark) .light\:text-gray-600 {
+    color: rgb(75 85 99);
+  }
+  html:not(.dark) .light\:text-gray-500 {
+    color: rgb(107 114 128);
+  }
+  html:not(.dark) .light\:text-purple-600 {
+    color: rgb(147 51 234);
+  }
+  html:not(.dark) .light\:bg-purple-600 {
+    background-color: rgb(147 51 234);
+  }
+  html:not(.dark) .light\:bg-purple-100 {
+    background-color: rgb(243 232 255);
+  }
+  html:not(.dark) .light\:text-purple-800 {
+    color: rgb(107 33 168);
+  }
+  html:not(.dark) .light\:border-gray-200 {
+    border-color: rgb(229 231 235);
+  }
+  html:not(.dark) .light\:border-purple-600 {
+    border-color: rgb(147 51 234);
+  }
+  html:not(.dark) .light\:hover\:text-purple-600:hover {
+    color: rgb(147 51 234);
+  }
+  html:not(.dark) .light\:hover\:bg-purple-700:hover {
+    background-color: rgb(126 34 206);
+  }
+  html:not(.dark) .light\:from-gray-50 {
+    --tw-gradient-from: rgb(249 250 251);
+  }
+  html:not(.dark) .light\:to-gray-100 {
+    --tw-gradient-to: rgb(243 244 246);
+  }
+  html:not(.dark) .light\:text-blue-500 {
+    color: rgb(59 130 246);
+  }
 }
