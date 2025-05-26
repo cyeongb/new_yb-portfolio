@@ -33,7 +33,7 @@ export const ScrollToTop = () => {
       }`}
       aria-label="맨 위로 이동"
     >
-      <ArrowUp className="w-5 h-5 text-gray-300 light:text-gray-600 transition-all duration-300 group-hover:text-purple-400 light:group-hover:text-purple-600 group-hover:-translate-y-0.5" />
+      <ArrowUp className="w-5 h-5 text-gray-300 light:text-gray-600 transition-all duration-300 group-hover:text-purple-300 light:group-hover:text-purple-700 group-hover:-translate-y-0.5 group-hover:scale-125 group-hover:stroke-2" />
       
       {/* 호버시 툴팁 */}
       <div className="absolute bottom-full right-0 mb-2 px-2 py-1 bg-gray-900 light:bg-gray-700 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
