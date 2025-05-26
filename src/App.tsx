@@ -5,12 +5,14 @@ import { Experience } from './components/Experience'
 import { Work } from './components/Work'
 import { Contact } from './components/Contact'
 import { ThemeToggle } from './components/ThemeToggle'
+import { ScrollToTop } from './components/ScrollToTop'
 
 function App() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-gray-900 light:bg-white transition-colors duration-300">
       <Header />
       <ThemeToggle />
+      <ScrollToTop />
       <main>
         <Hero />
         <About />
