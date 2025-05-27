@@ -18,7 +18,7 @@ const experiences: ExperienceItem[] = [
   {
     company: 'DOTMAN',
     period: '2021',
-    title:'다양한 프로젝트의 기획, 퍼블리싱싱, 프론트엔드 개발을 주로 담당',
+    title:'다양한 프로젝트의 기획, 퍼블리싱, 프론트엔드 개발을 주로 담당',
     description: [
       '고객사측에서 받은 디자인을 토대로 퍼블리싱, 프론트 개발을 진행.',
       '프론트엔드 : React.js를 활용한 반응형 웹 애플리케이션 구축',
