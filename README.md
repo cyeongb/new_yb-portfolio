@@ -1,4 +1,4 @@
-#Choi Yeongbi Portfolio
+##Choi Yeongbi Portfolio
 
 
 ## 피그마 기획 및 디자인:
