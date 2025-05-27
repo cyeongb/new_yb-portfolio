@@ -6,7 +6,7 @@ const techStackImages = [
   'Bootstrap.png',
   'C.png',
   'CSharp.png',
-  'C++ (CPlusPlus).png',
+  'CPlusPlus.png',
   'CSS3.png',
   'Eclipse IDE.png',
   'Figma.png',
