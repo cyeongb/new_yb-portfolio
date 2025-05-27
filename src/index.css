@@ -86,6 +86,113 @@ html:not(.dark) body {
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
+/* Tech Stack Flow Effect */
+.tech-stack-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 10 auto;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+  mask: linear-gradient(90deg, transparent 0%, white 8%, white 92%, transparent 100%);
+  -webkit-mask: linear-gradient(90deg, transparent 0%, white 8%, white 92%, transparent 100%);
+}
+
+.tech-stack-scroll {
+  display: flex;
+  animation: scroll-right-to-left 15s linear infinite;
+  width: fit-content;
+  gap: 40px;
+}
+
+.tech-stack-container:hover .tech-stack-scroll {
+  animation-play-state: paused;
+}
+
+.tech-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.tech-icon-wrapper:hover {
+  transform: scale(1.25) translateY(-8px);
+  z-index: 10;
+  position: relative;
+}
+
+.tech-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transition: filter 0.3s ease;
+}
+
+.tech-icon-wrapper:hover .tech-icon {
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4)) brightness(1.1);
+}
+
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 라이트 모드에서 아이콘 필터 조정 */
+html:not(.dark) .tech-icon {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+html:not(.dark) .tech-icon-wrapper:hover .tech-icon {
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3)) brightness(1.1);
+}
+
+/* 반응형 조정 */
+@media (max-width: 768px) {
+  .tech-stack-container {
+    padding: 50px 0;
+  }
+  
+  .tech-stack-scroll {
+    gap: 30px;
+  }
+  
+  .tech-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .tech-icon-wrapper:hover {
+    transform: scale(1.2) translateY(-6px);
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-stack-container {
+    padding: 40px 0;
+  }
+  
+  .tech-stack-scroll {
+    gap: 25px;
+  }
+  
+  .tech-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .tech-icon-wrapper:hover {
+    transform: scale(1.15) translateY(-4px);
+  }
+}
+
 /* light 클래스 유틸리티 정의 */
 @layer utilities {
   html:not(.dark) .light\:bg-white {

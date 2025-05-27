@@ -1,53 +1,63 @@
 import { useState, useEffect } from 'react';
 
+// 기술 스택 이미지 목록
+const techStackImages = [
+  'ApacheTomcat.png',
+  'Bootstrap.png',
+  'C.png',
+  'CSharp.png',
+  'C++ (CPlusPlus).png',
+  'CSS3.png',
+  'Eclipse IDE.png',
+  'Figma.png',
+  'Flask.png',
+  'Git.png',
+  'IntelliJ IDEA.png',
+  'Java.png',
+  'JavaScript.png',
+  'Jenkins.png',
+  'Jira.png',
+  'jQuery.png',
+  'Material UI.png',
+  'MySQL.png',
+  'NET core.png',
+  'Node.js.png',
+  'Oracle.png',
+  'Python.png',
+  'React.png',
+  'Redux.png',
+  'Sass.png',
+  'Spring.png',
+  'SQL Developer.png',
+  'Tailwind CSS.png',
+  'Three.js.png',
+  'TortoiseGit.png',
+  'TypeScript.png',
+  'Visual Studio Code (VS Code).png',
+  'Visual Studio.png',
+];
+
 export const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
   const [typedText, setTypedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [preventScroll, setPreventScroll] = useState(true);
   
   const texts = ["I'm Yotta Byte", "I'm a Developer", "I'm Full-Stack"];
   const currentText = texts[currentIndex];
 
-  // 스크롤 방지 및 이벤트 핸들러
+  // 스크롤 이벤트 핸들러 (패럴랙스 효과만)
   useEffect(() => {
-    const handleScroll = (e: Event) => {
-      const scrollTop = window.scrollY;
-      setScrollY(scrollTop);
-      
-    //   // 첫 번째 스크롤 시 실제 스크롤 방지하고 텍스트만 변경
-    //   if (preventScroll && scrollTop > 0 && scrollTop < 150) {
-    //     e.preventDefault();
-    //     window.scrollTo(0, 0);
-    //     // 100px 이상 스크롤하려고 시도하면 방지 해제
-    //     if (scrollTop > 100) {
-    //       setPreventScroll(false);
-    //     }
-    //   }
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
     };
 
-    const handleWheel = (e: WheelEvent) => {
-      if (preventScroll && e.deltaY > 0) {
-        e.preventDefault();
-        // 스크롤 시도시 scrollY 값만 증가
-        setScrollY(prev => Math.min(prev + Math.abs(e.deltaY) * 0.5, 200));
-        
-        // 일정 값 이상이 되면 실제 스크롤 허용
-        if (scrollY > 150) {
-          setPreventScroll(false);
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: false });
-    //window.addEventListener('wheel', handleWheel, { passive: false });
+    window.addEventListener('scroll', handleScroll, { passive: true });
     
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('wheel', handleWheel);
     };
-  }, [preventScroll, scrollY]);
+  }, []);
 
   // 무한 타이핑 효과
   useEffect(() => {
@@ -77,7 +87,7 @@ export const Hero = () => {
     }
   }, [typedText, isDeleting, currentText, currentIndex, texts.length]);
 
-  // 스크롤에 따른 텍스트 변화 (가상 스크롤 100 이상에서 변경)
+  // 스크롤에 따른 텍스트 변화 (스크롤 100 이상에서 변경)
   const isScrolled = scrollY > 100;
 
   // 패럴랙스 효과를 위한 계산
@@ -165,11 +175,46 @@ export const Hero = () => {
             </div>
           </div>
           
-          <div className="space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-purple-400 light:text-purple-600 drop-shadow-lg">
-              Full - Stack
-            </h2>
-            <p className="text-xl text-gray-400 light:text-gray-600 drop-shadow-md">Developer</p>
+          {/* 기술 스택 흘러가는 효과 */}
+          <div className="mb-8">
+            <div className="tech-stack-container">
+              <div className="tech-stack-scroll">
+                {/* 첫 번째 세트 */}
+                {techStackImages.map((image, index) => (
+                  <div
+                    key={`first-${index}`}
+                    className="tech-icon-wrapper"
+                  >
+                    <img
+                      src={`/${image}`}
+                      alt={image.replace('.png', '').replace(/[()]/g, '')}
+                      className="tech-icon"
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.style.display = 'none';
+                      }}
+                    />
+                  </div>
+                ))}
+                {/* 두 번째 세트 (무한 루프를 위한 복제) */}
+                {techStackImages.map((image, index) => (
+                  <div
+                    key={`second-${index}`}
+                    className="tech-icon-wrapper"
+                  >
+                    <img
+                      src={`/${image}`}
+                      alt={image.replace('.png', '').replace(/[()]/g, '')}
+                      className="tech-icon"
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.style.display = 'none';
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
           
           {/* 스크롤 표시 화살표 - 스크롤하면 페이드아웃 */}
