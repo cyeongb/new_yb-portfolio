@@ -29,7 +29,7 @@ const projects: ProjectItem[] = [
     techStack: 'Python, React.js, scikit-learn, yfinance, Flask, Plotly.js, Axios',
     image: '/stock.png',
     githubUrl: 'https://github.com/cyeongb/stock-prediction',
-    liveUrl: '',
+    liveUrl: 'https://stock-frontend-dusky.vercel.app/dashboard',
     notion:'https://www.notion.so/cyeongb/5-_-1e3aa4605a0b80a08ed7f9e38e367c0b?pvs=4'
   },
   {
