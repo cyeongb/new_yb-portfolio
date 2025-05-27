@@ -5,14 +5,22 @@ export const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* 왼쪽 이미지 영역 */}
           <div className="order-2 lg:order-1">
-            <div className="w-full max-w-sm mx-auto bg-gray-700 light:bg-gray-200 rounded-lg flex items-center justify-center aspect-[4/5]">
-              <div className="text-center">
-                <span className="text-gray-400 light:text-gray-500 text-lg block mb-2">
-                  내 사진
-                </span>
-                <span className="text-gray-400 light:text-gray-500 text-sm">
-                  me.jpg
-                </span>
+            <div className="w-full max-w-sm mx-auto bg-gray-700 light:bg-gray-200 rounded-lg overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-xl aspect-[4/5]">
+              <img 
+                src="me.jpg" 
+                alt="최영비사진" 
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-125"
+              />
+              {/* 이미지 로드 실패 시 표시될 플레이스홀더 */}
+              <div className="w-full h-full flex items-center justify-center text-center" style={{ display: 'none' }}>
+                <div>
+                  <span className="text-gray-400 light:text-gray-500 text-lg block mb-2">
+                    내 사진
+                  </span>
+                  <span className="text-gray-400 light:text-gray-500 text-sm">
+                    me.jpg
+                  </span>
+                </div>
               </div>
             </div>
           </div>
