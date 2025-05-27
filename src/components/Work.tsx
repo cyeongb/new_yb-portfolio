@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect, useRef } from 'react';
 import { ExternalLink, Github, Heart, ChevronDown } from 'lucide-react';
 import { ProjectItem } from '../types';
 
@@ -63,6 +63,32 @@ const projects: ProjectItem[] = [
 
 export const Work = () => {
   const [showMore, setShowMore] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.3,
+        rootMargin: '-50px 0px'
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   const toggleMore = () => {
     setShowMore(!showMore);
@@ -92,10 +118,10 @@ export const Work = () => {
   };
 
   return (
-    <section id="work" className="py-20 bg-gray-900 light:bg-white">
+    <section ref={sectionRef} id="work" className="py-20 bg-gray-900 light:bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="border-b border-gray-600 light:border-gray-300 pb-4 inline-block">
+          <div className={`work-underline border-b border-gray-600 light:border-gray-300 pb-4 inline-block ${isVisible ? 'animate' : ''}`}>
             <h2 className="text-3xl sm:text-4xl font-bold text-white light:text-gray-900">
               Work
             </h2>
