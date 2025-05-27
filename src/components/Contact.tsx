@@ -56,20 +56,12 @@ export const Contact = () => {
             <div className="w-80 h-80 mx-auto bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center">
               <img 
                 src="/gambi.jpg"
-                alt="최영비 사진"
+                alt="울감비 사진"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-125"
-                onError={(e) => {
-                  const target = e.currentTarget as HTMLImageElement;
-                  target.style.display = 'none';
-                  const placeholder = target.nextElementSibling as HTMLElement;
-                  if (placeholder) {
-                    placeholder.style.display = 'flex';
-                  }
-                }}
               />
               <div className="w-full h-full flex items-center justify-center" style={{ display: 'none' }}>
                 <span className="text-gray-500 dark:text-gray-400">
-                  사진 gambi.jpg
+                  사진
                 </span>
               </div>
             </div>
@@ -88,7 +80,7 @@ export const Contact = () => {
                 <a href="mailto:choiyeongbi@gmail.com"
                   className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                 >
-                  choiyeongbi@gmail.com
+                  cyeongb@gmail.com 
                 </a>
               </div>
               

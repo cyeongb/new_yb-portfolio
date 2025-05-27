@@ -12,15 +12,19 @@ export const useTheme = () => {
   });
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    if (isDark) {
-      root.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      root.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [isDark]);
+  const root = window.document.documentElement;
+  if (isDark) {
+    root.classList.add('dark');
+    root.classList.remove('light');
+    console.log('Dark mode:', root.classList);
+    localStorage.setItem('theme', 'dark');
+  } else {
+    root.classList.remove('dark'); 
+    root.classList.add('light');     
+    console.log('Light mode:', root.classList);
+    localStorage.setItem('theme', 'light');
+  }
+}, [isDark]);
 
   const toggleTheme = () => {
     setIsDark(!isDark);

@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: dark light;
@@ -15,10 +15,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
-/* 기본값을 다크모드로 설정 */
 html {
-  @apply dark;
+  scroll-behavior: smooth;
 }
+
 
 * {
   box-sizing: border-box;
@@ -30,7 +30,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  @apply bg-gray-900 text-white;
+  /* @apply bg-gray-900 text-white; */
 }
 
 #root {
@@ -58,7 +58,7 @@ body {
   background-color: rgb(31 41 55); /* gray-800 */
 }
 
-html:not(.dark) ::-webkit-scrollbar-track {
+html.light ::-webkit-scrollbar-track {
   background-color: rgb(243 244 246); /* gray-100 */
 }
 
@@ -76,15 +76,19 @@ html {
   scroll-behavior: smooth;
 }
 
-/* light 모드 (다크모드가 아닐 때) */
-html:not(.dark) body {
+
+html.light {
   @apply bg-white text-gray-900;
 }
 
-/* 다크모드 전환 애니메이션 */
-* {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+html.dark {
+  @apply bg-gray-900 text-white;
 }
+
+/* 다크모드 전환 애니메이션 */
+{
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+} 
 
 /* Tech Stack Flow Effect */
 .tech-stack-container {
@@ -146,11 +150,11 @@ html:not(.dark) body {
 }
 
 /* 라이트 모드에서 아이콘 필터 조정 */
-html:not(.dark) .tech-icon {
+html.light .tech-icon {
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
-html:not(.dark) .tech-icon-wrapper:hover .tech-icon {
+html.light .tech-icon-wrapper:hover .tech-icon {
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3)) brightness(1.1);
 }
 
@@ -195,61 +199,61 @@ html:not(.dark) .tech-icon-wrapper:hover .tech-icon {
 
 /* light 클래스 유틸리티 정의 */
 @layer utilities {
-  html:not(.dark) .light\:bg-white {
+  html.light .light\:bg-white {
     background-color: rgb(255 255 255);
   }
-  html:not(.dark) .light\:bg-gray-50 {
+  html.light .light\:bg-gray-50 {
     background-color: rgb(249 250 251);
   }
-  html:not(.dark) .light\:bg-gray-100 {
+  html.light .light\:bg-gray-100 {
     background-color: rgb(243 244 246);
   }
-  html:not(.dark) .light\:bg-gray-200 {
+  html.light .light\:bg-gray-200 {
     background-color: rgb(229 231 235);
   }
-  html:not(.dark) .light\:text-gray-900 {
+  html.light .light\:text-gray-900 {
     color: rgb(17 24 39);
   }
-  html:not(.dark) .light\:text-gray-700 {
+  html.light .light\:text-gray-700 {
     color: rgb(55 65 81);
   }
-  html:not(.dark) .light\:text-gray-600 {
+  html.light .light\:text-gray-600 {
     color: rgb(75 85 99);
   }
-  html:not(.dark) .light\:text-gray-500 {
+  html.light .light\:text-gray-500 {
     color: rgb(107 114 128);
   }
-  html:not(.dark) .light\:text-purple-600 {
+  html.light .light\:text-purple-600 {
     color: rgb(147 51 234);
   }
-  html:not(.dark) .light\:bg-purple-600 {
+  html.light .light\:bg-purple-600 {
     background-color: rgb(147 51 234);
   }
-  html:not(.dark) .light\:bg-purple-100 {
+  html.light .light\:bg-purple-100 {
     background-color: rgb(243 232 255);
   }
-  html:not(.dark) .light\:text-purple-800 {
+  html.light .light\:text-purple-800 {
     color: rgb(107 33 168);
   }
-  html:not(.dark) .light\:border-gray-200 {
+  html.light .light\:border-gray-200 {
     border-color: rgb(229 231 235);
   }
-  html:not(.dark) .light\:border-purple-600 {
+  html.light .light\:border-purple-600 {
     border-color: rgb(147 51 234);
   }
-  html:not(.dark) .light\:hover\:text-purple-600:hover {
+  html.light .light\:hover\:text-purple-600:hover {
     color: rgb(147 51 234);
   }
-  html:not(.dark) .light\:hover\:bg-purple-700:hover {
+  html.light .light\:hover\:bg-purple-700:hover {
     background-color: rgb(126 34 206);
   }
-  html:not(.dark) .light\:from-gray-50 {
+  html.light .light\:from-gray-50 {
     --tw-gradient-from: rgb(249 250 251);
   }
-  html:not(.dark) .light\:to-gray-100 {
+  html.light .light\:to-gray-100 {
     --tw-gradient-to: rgb(243 244 246);
   }
-  html:not(.dark) .light\:text-blue-500 {
+  html.light .light\:text-blue-500 {
     color: rgb(59 130 246);
   }
 }
@@ -272,7 +276,7 @@ html:not(.dark) .tech-icon-wrapper:hover .tech-icon {
   transition: transform 0.8s ease-out;
 }
 
-html:not(.dark) .about-underline::after {
+html.light .about-underline::after {
   background: linear-gradient(90deg, rgb(147 51 234), rgb(37 99 235));
 }
 
@@ -300,7 +304,7 @@ html:not(.dark) .about-underline::after {
   transition: transform 0.8s ease-out;
 }
 
-html:not(.dark) .experience-underline::after {
+html.light .experience-underline::after {
   background: linear-gradient(90deg, rgb(147 51 234), rgb(37 99 235));
 }
 
@@ -328,7 +332,7 @@ html:not(.dark) .experience-underline::after {
   transition: transform 0.8s ease-out;
 }
 
-html:not(.dark) .work-underline::after {
+html.light .work-underline::after {
   background: linear-gradient(90deg, rgb(147 51 234), rgb(37 99 235));
 }
 
@@ -354,7 +358,7 @@ html:not(.dark) .work-underline::after {
   transition: transform 0.8s ease-out;
 }
 
-html:not(.dark) .contact-underline::after {
+html.light .contact-underline::after {
   background: linear-gradient(90deg, rgb(147 51 234), rgb(37 99 235));
 }
 

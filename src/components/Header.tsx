@@ -21,7 +21,7 @@ export const Header = () => {
               <span className="text-white font-bold text-sm transition-all duration-300 group-hover:text-lg">YB</span>
             </div>
             <span className="text-xl font-bold text-white light:text-gray-900 transition-all duration-300 group-hover:text-purple-400 light:group-hover:text-purple-600 group-hover:scale-105">
-              Yotta Byte
+              Yeong Bi
             </span>
           </button>
           

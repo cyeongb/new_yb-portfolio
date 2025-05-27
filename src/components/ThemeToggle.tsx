@@ -27,7 +27,7 @@ export const ThemeToggle = () => {
       
       {/* 호버시 툴팁 */}
       <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 light:bg-gray-700 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-        {isDark ? '라이트 모드' : '다크 모드'}
+        {isDark ? '라이트 모드로 쨘' : '다크 모드로 쨘'}
       </div>
     </button>
   );

@@ -4,18 +4,18 @@ import { ProjectItem } from '../types';
 
 const projects: ProjectItem[] = [
   {
-    title: 'Tebihome',
+    title: 'TebiBox',
     description: [
-      'Tebihome 브랜드 웹사이트 구축 및 운영',
+      'TebiBox 웹사이트 구축 및 운영',
       '실시간 데이터 처리 시스템을 통한 효율적인 서비스 제공',
       '사용자 중심의 UI/UX 디자인으로 사용성 및 접근성 향상',
       '반응형 웹 디자인 적용으로 다양한 디바이스 완벽 대응',
       '최신 웹 기술 스택을 활용한 성능 최적화 및 SEO 개선'
     ],
     techStack: 'React.js, Node.js, Express, MongoDB, Tailwind CSS',
-    image: '/assets/img/tebihome.png',
+    image: '/tebibox.png',
     githubUrl: 'https://github.com/yottabyte/tebihome',
-    liveUrl: 'https://tebihome.example.com'
+    liveUrl: 'https://www.tebibox.com/'
   },
   {
     title: 'Stock-Dashboard',
@@ -27,7 +27,7 @@ const projects: ProjectItem[] = [
       '모바일 퍼스트 반응형 디자인으로 완벽한 크로스 플랫폼 지원'
     ],
     techStack: 'React.js, TypeScript, Chart.js, Python Flask, WebSocket',
-    image: '/assets/img/stock.png',
+    image: '/stock.png',
     githubUrl: 'https://github.com/yottabyte/stock-dashboard',
     liveUrl: 'https://stock-dashboard.example.com'
   },
@@ -41,7 +41,7 @@ const projects: ProjectItem[] = [
       '개인정보 암호화 및 보안 강화를 통한 안전한 데이터 처리'
     ],
     techStack: 'Vue.js, Spring Boot, MySQL, JWT, 공공데이터API',
-    image: '/assets/img/pension.png',
+    image: '/pension.png',
     githubUrl: 'https://github.com/yottabyte/pension-system',
     liveUrl: 'https://pension-info.example.com'
   },
@@ -55,9 +55,9 @@ const projects: ProjectItem[] = [
       '다국어 지원 및 웹 접근성 가이드라인 준수'
     ],
     techStack: 'React.js, D3.js, Node.js, MongoDB, 공공API',
-    image: '/assets/img/corona.png',
-    githubUrl: 'https://github.com/yottabyte/corona-tracker',
-    liveUrl: 'https://corona-tracker.example.com'
+    image: '/corona.png',
+    githubUrl: 'https://github.com/cyeongb/COVID19_Tracker',
+    liveUrl: 'https://cyeongb.github.io/COVID19_Tracker/'
   }
 ];
 
@@ -142,12 +142,11 @@ export const Work = () => {
               <div className="w-full lg:w-1/2">
                 <div className="bg-gray-800 light:bg-gray-100 rounded-lg p-8 aspect-video flex items-center justify-center transition-all duration-300 hover:scale-105 cursor-pointer group">
                   <div className="text-center">
-                    <span className="text-gray-400 light:text-gray-500 text-lg block mb-2 group-hover:text-purple-400 light:group-hover:text-purple-600 transition-colors">
-                      프로젝트 캡쳐화면
-                    </span>
-                    <span className="text-gray-400 light:text-gray-500 text-sm group-hover:text-purple-400 light:group-hover:text-purple-600 transition-colors">
-                      {project.image}
-                    </span>
+                    <img 
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-125"
+                    />
                   </div>
                 </div>
               </div>
