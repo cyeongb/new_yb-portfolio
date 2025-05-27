@@ -53,7 +53,7 @@ export const Contact = () => {
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <div className="w-80 h-80 mx-auto bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center">
+            <div className="w-80 h-80 mx-auto bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center overflow-hidden cursor-pointer group">
               <img 
                 src="/gambi.jpg"
                 alt="울감비 사진"
@@ -68,9 +68,9 @@ export const Contact = () => {
           </div>
           
           <div className="space-y-8">
-            <div className="bg-purple-100 dark:bg-purple-900/20 rounded-full px-8 py-4 inline-block">
-              <span className="text-purple-800 dark:text-purple-300 font-medium">
-                연락하세요! ◕ ◡ ◕
+            <div className="bg-purple-100 dark:bg-purple-900/20 rounded-full px-8 py-4 flex items-center justify-center overflow-hidden group ">
+              <span className="text-purple-800 dark:text-purple-300 font-medium object-cover transition-transform duration-300 group-hover:scale-125 ">
+                연락하세요 ◕ ◡ ◕ 냥!
               </span>
             </div>
             
