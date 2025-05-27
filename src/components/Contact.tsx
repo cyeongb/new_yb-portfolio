@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin,Download  } from 'lucide-react';
+import { Mail, Github, Download  } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 
 export const Contact = () => {
