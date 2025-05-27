@@ -13,7 +13,7 @@ const projects: ProjectItem[] = [
       '최신 웹 기술 스택을 활용한 성능 최적화 및 SEO 개선'
     ],
     techStack: 'React.js, Node.js, Express, MongoDB, Tailwind CSS',
-    image: 'tebihome.png',
+    image: '/assets/img/tebihome.png',
     githubUrl: 'https://github.com/yottabyte/tebihome',
     liveUrl: 'https://tebihome.example.com'
   },
@@ -27,7 +27,7 @@ const projects: ProjectItem[] = [
       '모바일 퍼스트 반응형 디자인으로 완벽한 크로스 플랫폼 지원'
     ],
     techStack: 'React.js, TypeScript, Chart.js, Python Flask, WebSocket',
-    image: 'stock.png',
+    image: '/assets/img/stock.png',
     githubUrl: 'https://github.com/yottabyte/stock-dashboard',
     liveUrl: 'https://stock-dashboard.example.com'
   },
@@ -41,7 +41,7 @@ const projects: ProjectItem[] = [
       '개인정보 암호화 및 보안 강화를 통한 안전한 데이터 처리'
     ],
     techStack: 'Vue.js, Spring Boot, MySQL, JWT, 공공데이터API',
-    image: 'pension.png',
+    image: '/assets/img/pension.png',
     githubUrl: 'https://github.com/yottabyte/pension-system',
     liveUrl: 'https://pension-info.example.com'
   },
@@ -55,7 +55,7 @@ const projects: ProjectItem[] = [
       '다국어 지원 및 웹 접근성 가이드라인 준수'
     ],
     techStack: 'React.js, D3.js, Node.js, MongoDB, 공공API',
-    image: 'corona.png',
+    image: '/assets/img/corona.png',
     githubUrl: 'https://github.com/yottabyte/corona-tracker',
     liveUrl: 'https://corona-tracker.example.com'
   }

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import { ExperienceItem } from '../types';
 
@@ -43,18 +43,44 @@ const experiences: ExperienceItem[] = [
 
 export const Experience = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.3,
+        rootMargin: '-50px 0px'
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   const toggleExpanded = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 
   return (
-    <section id="experience" className="py-20 bg-gray-800 light:bg-gray-50">
+    <section ref={sectionRef} id="experience" className="py-20 bg-gray-800 light:bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="border-b border-gray-600 light:border-gray-300 pb-4 inline-block">
+          <div className={`experience-underline border-b border-gray-600 light:border-gray-300 pb-4 inline-block ${isVisible ? 'animate' : ''}`}>
             <h2 className="text-3xl sm:text-4xl font-bold text-white light:text-gray-900">
-              Work Experience
+              My Experience
             </h2>
           </div>
         </div>
