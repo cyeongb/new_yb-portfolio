@@ -1,11 +1,24 @@
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+
 export const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
+    // 모바일 메뉴 닫기
+    setIsMobileMenuOpen(false);
   };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    // 모바일 메뉴 닫기
+    setIsMobileMenuOpen(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -24,8 +37,8 @@ export const Header = () => {
               Yeong Bi
             </span>
           </button>
-          
-          {/* 네비게이션 메뉴 */}
+                     
+          {/* 데스크톱 네비게이션 메뉴 */}
           <nav className="hidden md:flex space-x-8">
             <button
               onClick={() => scrollToSection('about')}
@@ -52,15 +65,55 @@ export const Header = () => {
               Contact
             </button>
           </nav>
-
-          {/* 모바일 메뉴 버튼 (필요시 추가) */}
+           
+          {/* 모바일 햄버거 메뉴 버튼 */}
           <div className="md:hidden">
-            <button className="text-gray-300 light:text-gray-700 hover:text-purple-400 light:hover:text-purple-600">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+            <button 
+              onClick={toggleMobileMenu}
+              className="p-2 text-gray-300 light:text-gray-700 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-300 hover:scale-110"
+              aria-label="메뉴 토글"
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
+        </div>
+
+        {/* 모바일 메뉴 - 드롭다운 */}
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen 
+            ? 'max-h-64 opacity-100 pb-4' 
+            : 'max-h-0 opacity-0 pb-0'
+        }`}>
+          <nav className="flex flex-col space-y-3 pt-4 border-t border-gray-700 light:border-gray-200">
+            <button
+              onClick={() => scrollToSection('about')}
+              className="text-left px-4 py-2 text-gray-300 light:text-gray-700 hover:text-purple-400 light:hover:text-purple-600 hover:bg-gray-800/50 light:hover:bg-gray-100 transition-all duration-300 font-medium rounded-lg"
+            >
+              About
+            </button>
+            <button
+              onClick={() => scrollToSection('experience')}
+              className="text-left px-4 py-2 text-gray-300 light:text-gray-700 hover:text-purple-400 light:hover:text-purple-600 hover:bg-gray-800/50 light:hover:bg-gray-100 transition-all duration-300 font-medium rounded-lg"
+            >
+              Experience
+            </button>
+            <button
+              onClick={() => scrollToSection('work')}
+              className="text-left px-4 py-2 text-gray-300 light:text-gray-700 hover:text-purple-400 light:hover:text-purple-600 hover:bg-gray-800/50 light:hover:bg-gray-100 transition-all duration-300 font-medium rounded-lg"
+            >
+              Work
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="text-left px-4 py-2 text-gray-300 light:text-gray-700 hover:text-purple-400 light:hover:text-purple-600 hover:bg-gray-800/50 light:hover:bg-gray-100 transition-all duration-300 font-medium rounded-lg"
+            >
+              Contact
+            </button>
+          </nav>
         </div>
       </div>
     </header>

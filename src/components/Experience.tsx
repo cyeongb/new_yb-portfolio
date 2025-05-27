@@ -6,38 +6,37 @@ const experiences: ExperienceItem[] = [
   {
     company: 'SAMSUNG DS PLM',
     period: '2022 - 2024',
+    title:'삼성전자 DS부문 PLM 시스템 운영 및 개발',
     description: [
-      '삼성전자 DS부문 PLM 솔루션 운영 및 개발',
-      'PLM Product Lifecycle Management 시스템 구축',
-      'Java SpringBoot 기반 백엔드 API 개발 및 최적화',
-      'JSP, jQuery 기반 사용자 인터페이스 개발',
-      'Oracle Database 설계 및 성능 튜닝'
+      'PLM 6개 사업부 제품 Lifecycle Management 시스템 관리 및 요청사항에 따른 작업. ',
+      '6개 사업부 : MEMORY / FOUNDRY / LED / 반도체연구소 / NEW SLSI / 설비연구소',
+      'Java MVC기반 백엔드 +  JSP + Javascript 클라이언트 구현. ',
+      '사업부간의 필요한 데이터 인터페이스 개발 및 스키마 생성',
     ],
-    techStack: 'Java (SpringBoot, JPA), JSP, jQuery, Oracle SQL'
+    techStack: 'Java , JSP, PL/SQL, Oracle, Javascript, jQuery, MVC, MyBatis'
   },
   {
     company: 'DOTMAN',
     period: '2021',
+    title:'다양한 프로젝트의 기획, 퍼블리싱싱, 프론트엔드 개발을 주로 담당',
     description: [
-      'Flutter 기반 크로스플랫폼 모바일 애플리케이션 개발',
-      'React.js를 활용한 반응형 웹 애플리케이션 구축',
-      'PHP Laravel 프레임워크를 사용한 RESTful API 개발',
-      'MySQL 데이터베이스 설계 및 쿼리 최적화',
-      'Git을 활용한 형상관리 및 협업 프로세스 구축'
+      '고객사측에서 받은 디자인을 토대로 퍼블리싱, 프론트 개발을 진행.',
+      '프론트엔드 : React.js를 활용한 반응형 웹 애플리케이션 구축',
+      '기획,퍼블리싱 : Figma 를 이용한 스토리보드 작업, 색채 및 디자인 작업, html,css 목업',
+      '참여 프로젝트 : Tebihome 원 게시판 홈페이지, Ellexi Philo-v CCTV 관리자 홈페이지 ',
     ],
-    techStack: 'Flutter, React.js, PHP Laravel, MySQL, Git'
+    techStack: 'Javascript(ES6), React.js, React-Admin, Redux-thunk, Material-ui, Git, Figma'
   },
   {
     company: 'KT DS',
     period: '2020',
+    title:'마이페이지 팀 소속으로 요금제 관련 개발건 진행함.',
     description: [
-      'Vue.js 기반 SPA(Single Page Application) 개발',
-      'Node.js Express 서버 구축 및 API 설계',
-      'MySQL 데이터베이스 ERD 설계 및 구현',
-      'RESTful API 아키텍처 설계 및 문서화',
-      'Agile 방법론을 적용한 프로젝트 관리'
+      '가족결합 요금제를 사용하는 고객들을 대상으로 유형에 따른 KT 결합 요금제를 추천하는 페이지 개발.',
+      '타 부서와 협업하여 기획문서에 따른 풀스택 개발 진행',
+      'Agile 방법론을 적용한 프로젝트 진행'
     ],
-    techStack: 'Vue.js, Node.js Express, MySQL, RESTful API'
+    techStack: 'Java, JQuery, JSP(JSTL), Ant(build), JENKINS , RED MINE, JIRA, SVN, Mysql'
   }
 ];
 
@@ -124,8 +123,8 @@ export const Experience = () => {
                     </button>
                   </div>
                   
-                  <p className="text-sm text-gray-500 light:text-gray-500 mb-4">
-                    {exp.techStack}
+                  <p className="text-gray-300 light:text-gray-500 mb-4">
+                    {exp.title}
                   </p>
                   
                   {/* 펼쳐지는 상세 내용 */}

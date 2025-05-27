@@ -6,58 +6,60 @@ const projects: ProjectItem[] = [
   {
     title: 'TebiBox',
     description: [
-      'TebiBox 웹사이트 구축 및 운영',
-      '실시간 데이터 처리 시스템을 통한 효율적인 서비스 제공',
-      '사용자 중심의 UI/UX 디자인으로 사용성 및 접근성 향상',
-      '반응형 웹 디자인 적용으로 다양한 디바이스 완벽 대응',
-      '최신 웹 기술 스택을 활용한 성능 최적화 및 SEO 개선'
+      '고객사(tebihome)측에서 받은 디자인을 토대로 퍼블리싱, 프론트 개발 진행함',
+      'React.js를 활용한 반응형 웹 애플리케이션 구축',
+      '유치원 원장님,선생님과 학부모 및 일반사용자가 사용하는 유치원 홈페이지 제작',
+      '학부모와 유치원선생님들이 서로 주고받는 알림장, 게시판, 앨범, 푸시알림, 각종 프로그램으로 구성',
     ],
-    techStack: 'React.js, Node.js, Express, MongoDB, Tailwind CSS',
+    techStack: 'React.js, Javascript(ES6), Redux-thunk, Material-ui, React-Admin,  Figma',
     image: '/tebibox.png',
-    githubUrl: 'https://github.com/yottabyte/tebihome',
-    liveUrl: 'https://www.tebibox.com/'
+    githubUrl: '',
+    liveUrl: 'https://www.tebibox.com/',
+    notion:''
   },
   {
     title: 'Stock-Dashboard',
     description: [
-      '실시간 주식 시장 데이터 대시보드 웹 서비스 개발',
-      'Chart.js와 D3.js를 활용한 인터랙티브 데이터 시각화',
-      'WebSocket 기반 실시간 데이터 스트리밍 구현',
-      '사용자 맞춤형 포트폴리오 관리 및 알림 기능',
-      '모바일 퍼스트 반응형 디자인으로 완벽한 크로스 플랫폼 지원'
+      'yfinance 를 활용한 실시간 주식 시장 데이터를 활용한 주가 예측 대시보드',
+      '실시간 주가 데이터 업데이트 하여 일별/주별/월별/연별 차트 구현',
+      '선형회귀 모델을 사용한 미국 주가 예측',
+      '즐겨찾기 기능으로 주식 추가하여 저장 및 관리 가능',
+      '선형 차트, 캔들스틱 차트로 데이터 시각화 구현.'
     ],
-    techStack: 'React.js, TypeScript, Chart.js, Python Flask, WebSocket',
+    techStack: 'Python, React.js, scikit-learn, yfinance, Flask, Plotly.js, Axios',
     image: '/stock.png',
-    githubUrl: 'https://github.com/yottabyte/stock-dashboard',
-    liveUrl: 'https://stock-dashboard.example.com'
+    githubUrl: 'https://github.com/cyeongb/stock-prediction',
+    liveUrl: '',
+    notion:'https://www.notion.so/cyeongb/5-_-1e3aa4605a0b80a08ed7f9e38e367c0b?pvs=4'
   },
   {
-    title: 'Pension Info System',
+    title: 'Korea Pension Info',
     description: [
-      '국민연금 정보 조회 및 관리 웹 시스템 개발',
       '공공데이터 API 연동을 통한 실시간 연금 정보 제공',
-      'JWT 기반 사용자 인증 및 권한 관리 시스템 구축',
-      '연금 수령액 계산기 및 예상 수령 시뮬레이션 기능',
-      '개인정보 암호화 및 보안 강화를 통한 안전한 데이터 처리'
+      '법정동 코드 및 나이로 지역별 연금 정보 조회 가능',
+      '주소창에 입력하면, 해당 이름으로 db 에 저장되어있는 법정동 코드로 API 요청을 보내 데이터를 받는 형식으로 개발.',
+      '지역별 가입 현황 조회, 수급현황 조회, 나이별 가입, 수급현황 조회 기능 구현.',
+      '추후 4% 인상되는 "4% 인상시 납부금액"을 구현하여  현재 납부금액과 비교 가능.'
     ],
-    techStack: 'Vue.js, Spring Boot, MySQL, JWT, 공공데이터API',
+    techStack: 'Mysql, React.js, Express.js, Node.js, Axios, Tailwind CSS, 공공데이터API',
     image: '/pension.png',
-    githubUrl: 'https://github.com/yottabyte/pension-system',
-    liveUrl: 'https://pension-info.example.com'
+    githubUrl: 'https://github.com/cyeongb/pension-api-project',
+    liveUrl: '',
+    notion:'https://www.notion.so/cyeongb/3-1ceaa4605a0b8079a78ec0a027686b6b?pvs=4'
   },
   {
-    title: 'Corona Tracker',
+    title: 'Travel Vlog',
     description: [
-      'COVID-19 실시간 현황 추적 및 분석 대시보드',
-      'D3.js 기반 인터랙티브 지도 및 차트 시각화',
-      '국가별/지역별 상세 통계 및 트렌드 분석',
-      '실시간 데이터 업데이트 및 푸시 알림 서비스',
-      '다국어 지원 및 웹 접근성 가이드라인 준수'
+      '고객사(tebihome)측에서 받은 디자인을 토대로 퍼블리싱, 프론트 개발 진행함',
+      'React.js를 활용한 반응형 웹 애플리케이션 구축',
+      '유치원 원장님,선생님과 학부모 및 일반사용자가 사용하는 유치원 홈페이지 제작',
+      '학부모와 유치원선생님들이 서로 주고받는 알림장, 게시판, 앨범, 푸시알림, 각종 프로그램으로 구성',
     ],
-    techStack: 'React.js, D3.js, Node.js, MongoDB, 공공API',
-    image: '/corona.png',
-    githubUrl: 'https://github.com/cyeongb/COVID19_Tracker',
-    liveUrl: 'https://cyeongb.github.io/COVID19_Tracker/'
+    techStack: 'Javascript, 반응형, Google map API, Youtube Iframe API, HTML & CSS',
+    image: '/travel.png',
+    githubUrl: 'https://github.com/cyeongb/project2',
+    liveUrl: 'https://cyeongb.github.io/project2/',
+    notion:'https://www.notion.so/cyeongb/2-YB-s-Travel-1ceaa4605a0b8036b6fefccb04eafc97?pvs=4'
   }
 ];
 
@@ -186,15 +188,42 @@ export const Work = () => {
                 <div className="flex items-center space-x-4">
                   <button className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-200 hover:scale-105 group">
                     <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                    <span className="text-sm font-medium">GitHub</span>
+                    <span className="text-sm font-medium">
+                      <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                        >
+                          github
+                        </a>
+                    </span>
                   </button>
                   <button className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-200 hover:scale-105 group">
                     <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                    <span className="text-sm font-medium">Live Demo</span>
+                    <span className="text-sm font-medium">
+                      <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                        >
+                          Link
+                        </a>
+                      </span>
                   </button>
                   <button className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-red-400 light:hover:text-red-500 transition-all duration-200 hover:scale-105 group">
                     <Heart className="w-4 h-4 group-hover:scale-110 transition-transform group-hover:fill-current" />
-                    <span className="text-sm font-medium">Like</span>
+                    <span className="text-sm font-medium">
+                      <a
+                          href={project.notion}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                        >
+                          Notion
+                        </a>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -259,12 +288,19 @@ export const Work = () => {
                 <div className="w-full lg:w-1/2">
                   <div className="bg-gray-800 light:bg-gray-100 rounded-lg p-8 aspect-video flex items-center justify-center transition-all duration-300 hover:scale-105 cursor-pointer group">
                     <div className="text-center">
-                      <span className="text-gray-400 light:text-gray-500 text-lg block mb-2 group-hover:text-purple-400 light:group-hover:text-purple-600 transition-colors">
-                        프로젝트 캡쳐화면
-                      </span>
-                      <span className="text-gray-400 light:text-gray-500 text-sm group-hover:text-purple-400 light:group-hover:text-purple-600 transition-colors">
-                        {project.image}
-                      </span>
+                      <img 
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full aspect-video object-cover transition-transform duration-300 group-hover:scale-110"
+                        onError={(e) => {
+                          const target = e.currentTarget as HTMLImageElement;
+                          target.style.display = 'none';
+                          const placeholder = target.nextElementSibling as HTMLElement;
+                          if (placeholder) {
+                            placeholder.style.display = 'flex';
+                          }
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -304,15 +340,42 @@ export const Work = () => {
                   <div className="flex items-center space-x-4">
                     <button className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-200 hover:scale-105 group">
                       <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm font-medium">GitHub</span>
+                      <span className="text-sm font-medium"> 
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                        >
+                          github
+                        </a>
+                        </span>
                     </button>
                     <button className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-200 hover:scale-105 group">
                       <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm font-medium">Live Demo</span>
+                      <span className="text-sm font-medium">
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                        >
+                          Link
+                        </a>
+                        </span>
                     </button>
                     <button className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-red-400 light:hover:text-red-500 transition-all duration-200 hover:scale-105 group">
                       <Heart className="w-4 h-4 group-hover:scale-110 transition-transform group-hover:fill-current" />
-                      <span className="text-sm font-medium">Like</span>
+                      <span className="text-sm font-medium"> 
+                        <a
+                          href={project.notion}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                        >
+                          Notion
+                        </a>
+                      </span>
                     </button>
                   </div>
                 </div>
