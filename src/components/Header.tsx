@@ -7,7 +7,6 @@ export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   // const { isKorean } = useLanguage();
 
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -37,7 +36,7 @@ export const Header = () => {
             <div className="w-8 h-8 bg-purple-500 light:bg-purple-600 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-purple-400 light:group-hover:bg-purple-700 group-hover:shadow-lg group-hover:shadow-purple-500/50">
               <span className="text-white font-bold text-sm transition-all duration-300 group-hover:text-lg">YB</span>
             </div>
-            <span className="text-xl font-bold text-white light:text-gray-900 transition-all duration-300 group-hover:text-purple-400 light:group-hover:text-purple-600 group-hover:scale-105">
+            <span className="text-xl font-bold text-white light:text-gray-800 transition-all duration-300 group-hover:text-purple-400 light:group-hover:text-purple-600 group-hover:scale-105">
               Yeong Bi
             </span>
           </button>
@@ -46,25 +45,25 @@ export const Header = () => {
           <nav className="hidden md:flex space-x-8">
             <button
               onClick={() => scrollToSection('about')}
-              className="text-gray-300 light:text-gray-700 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-300 font-medium hover:scale-110 hover:font-semibold"
+              className="text-gray-300 light:text-gray-300 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-300 font-medium hover:scale-110 hover:font-semibold"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('experience')}
-              className="text-gray-300 light:text-gray-700 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-300 font-medium hover:scale-110 hover:font-semibold"
+              className="text-gray-300 light:text-gray-300 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-300 font-medium hover:scale-110 hover:font-semibold"
             >
               Experience
             </button>
             <button
               onClick={() => scrollToSection('work')}
-              className="text-gray-300 light:text-gray-700 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-300 font-medium hover:scale-110 hover:font-semibold"
+              className="text-gray-300 light:text-gray-300 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-300 font-medium hover:scale-110 hover:font-semibold"
             >
               Work
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-gray-300 light:text-gray-700 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-300 font-medium hover:scale-110 hover:font-semibold"
+              className="text-gray-300 light:text-gray-300 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-300 font-medium hover:scale-110 hover:font-semibold"
             >
               Contact
             </button>
@@ -74,7 +73,7 @@ export const Header = () => {
           <div className="md:hidden">
             <button 
               onClick={toggleMobileMenu}
-              className="p-2 text-gray-300 light:text-gray-700 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-300 hover:scale-110"
+              className="p-2 text-gray-300 light:text-gray-300 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-300 hover:scale-110"
               aria-label="메뉴 토글"
             >
               {isMobileMenuOpen ? (
@@ -95,25 +94,25 @@ export const Header = () => {
           <nav className="flex flex-col space-y-3 pt-4 border-t border-gray-700 light:border-gray-200">
             <button
               onClick={() => scrollToSection('about')}
-              className="text-left px-4 py-2 text-gray-300 light:text-gray-700 hover:text-purple-400 light:hover:text-purple-600 hover:bg-gray-800/50 light:hover:bg-gray-100 transition-all duration-300 font-medium rounded-lg"
+              className="text-left px-4 py-2 text-gray-300 light:text-gray-300 hover:text-purple-400 light:hover:text-purple-600 hover:bg-gray-800/50 light:hover:bg-gray-100 transition-all duration-300 font-medium rounded-lg"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('experience')}
-              className="text-left px-4 py-2 text-gray-300 light:text-gray-700 hover:text-purple-400 light:hover:text-purple-600 hover:bg-gray-800/50 light:hover:bg-gray-100 transition-all duration-300 font-medium rounded-lg"
+              className="text-left px-4 py-2 text-gray-300 light:text-gray-300 hover:text-purple-400 light:hover:text-purple-600 hover:bg-gray-800/50 light:hover:bg-gray-100 transition-all duration-300 font-medium rounded-lg"
             >
               Experience
             </button>
             <button
               onClick={() => scrollToSection('work')}
-              className="text-left px-4 py-2 text-gray-300 light:text-gray-700 hover:text-purple-400 light:hover:text-purple-600 hover:bg-gray-800/50 light:hover:bg-gray-100 transition-all duration-300 font-medium rounded-lg"
+              className="text-left px-4 py-2 text-gray-300 light:text-gray-300 hover:text-purple-400 light:hover:text-purple-600 hover:bg-gray-800/50 light:hover:bg-gray-100 transition-all duration-300 font-medium rounded-lg"
             >
               Work
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-left px-4 py-2 text-gray-300 light:text-gray-700 hover:text-purple-400 light:hover:text-purple-600 hover:bg-gray-800/50 light:hover:bg-gray-100 transition-all duration-300 font-medium rounded-lg"
+              className="text-left px-4 py-2 text-gray-300 light:text-gray-300 hover:text-purple-400 light:hover:text-purple-600 hover:bg-gray-800/50 light:hover:bg-gray-100 transition-all duration-300 font-medium rounded-lg"
             >
               Contact
             </button>
