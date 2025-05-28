@@ -50,10 +50,10 @@ const projects: ProjectItem[] = [
   {
     title: 'Travel Vlog',
     description: [
-      '고객사(tebihome)측에서 받은 디자인을 토대로 퍼블리싱, 프론트 개발 진행함',
-      'React.js를 활용한 반응형 웹 애플리케이션 구축',
-      '유치원 원장님,선생님과 학부모 및 일반사용자가 사용하는 유치원 홈페이지 제작',
-      '학부모와 유치원선생님들이 서로 주고받는 알림장, 게시판, 앨범, 푸시알림, 각종 프로그램으로 구성',
+      '여행 브이로그 컨셉의 웹사이트',
+      '제가 여행했던 나라들에서 가 본 맛집을 추천해주는 목적',
+      'background를 youtube 영상에서 embded 해서 가져옴',
+      'Google map API 연동하여 해당 지역 연결함',
     ],
     techStack: 'Javascript, 반응형, Google map API, Youtube Iframe API, HTML & CSS',
     image: '/travel.png',
