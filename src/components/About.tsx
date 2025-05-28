@@ -27,6 +27,7 @@ export const About = () => {
       }
     };
   }, []);
+  
   return (
     <section ref={sectionRef} id="about" className="py-20 bg-gray-900 light:bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

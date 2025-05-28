@@ -33,7 +33,7 @@ const techStackImages = [
   'Three.js.png',
   'TortoiseGit.png',
   'TypeScript.png',
-  'Visual Studio Code (VS Code).png',
+  'Visual Studio Code.png',
   'Visual Studio.png',
 ];
 
@@ -187,7 +187,7 @@ export const Hero = () => {
                   >
                     <img
                       src={`/${image}`}
-                      alt={image.replace('.png', '').replace(/[()]/g, '')}
+                      alt={image.replace('.png', '')}
                       className="tech-icon"
                       onError={(e) => {
                         const target = e.currentTarget as HTMLImageElement;
@@ -204,7 +204,7 @@ export const Hero = () => {
                   >
                     <img
                       src={`/${image}`}
-                      alt={image.replace('.png', '').replace(/[()]/g, '')}
+                      alt={image.replace('.png', '')}
                       className="tech-icon"
                       onError={(e) => {
                         const target = e.currentTarget as HTMLImageElement;
