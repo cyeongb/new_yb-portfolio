@@ -16,12 +16,12 @@ export const useTheme = () => {
   if (isDark) {
     root.classList.add('dark');
     root.classList.remove('light');
-    console.log('Dark mode:', root.classList);
+    // console.log('Dark mode:', root.classList);
     localStorage.setItem('theme', 'dark');
   } else {
     root.classList.remove('dark'); 
     root.classList.add('light');     
-    console.log('Light mode:', root.classList);
+    // console.log('Light mode:', root.classList);
     localStorage.setItem('theme', 'light');
   }
 }, [isDark]);
