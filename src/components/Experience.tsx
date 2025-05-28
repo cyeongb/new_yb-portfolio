@@ -27,7 +27,7 @@ const experiences: ExperienceItem[] = [
     techStack: 'Javascript(ES6), React.js, React-Admin, Redux-thunk, Material-ui, Git, Figma'
   },
   {
-    company: 'KT DS',
+    company: 'KT',
     period: '2020',
     title:'마이페이지 팀 소속으로 요금제 관련 개발건 진행함.',
     description: [
@@ -134,7 +134,7 @@ export const Experience = () => {
                   }`}>
                     <div className="bg-gray-900 light:bg-white rounded-lg p-6 border border-gray-700 light:border-gray-200 shadow-lg">
                       <ul className="space-y-3">
-                        {exp.description.map((desc, idx) => (
+                        {exp?.description?.map((desc, idx) => (
                           <li key={idx} className="text-gray-300 light:text-gray-700 flex items-start">
                             <span className="text-purple-400 light:text-purple-600 mr-3 mt-1.5 text-xs">●</span>
                             <span className="leading-relaxed">{desc}</span>
@@ -145,7 +145,7 @@ export const Experience = () => {
                       <div className="mt-4 pt-4 border-t border-gray-700 light:border-gray-200">
                         <div className="flex items-center space-x-2">
                           <span className="text-xs font-medium text-gray-400 light:text-gray-500">주요 기술:</span>
-                          {exp.techStack?.split(', ').map((tech, techIdx) => (
+                          {exp?.techStack?.split(', ').map((tech, techIdx) => (
                             <span
                               key={techIdx}
                               className="px-2 py-1 bg-purple-900/20 light:bg-purple-100 text-purple-300 light:text-purple-700 text-xs rounded-full"

@@ -93,31 +93,38 @@ export const Work = () => {
   }, []);
 
   const toggleMore = () => {
-    setShowMore(!showMore);
-    
-    if (!showMore) {
-      // 펼칠 때 - 잠시 후 아래로 스크롤
-      setTimeout(() => {
-        const element = document.getElementById('work');
-        if (element) {
-          const elementRect = element.getBoundingClientRect();
-          const elementBottom = elementRect.bottom + window.scrollY;
+  setShowMore(!showMore);
+  
+  if (!showMore) {
+    // 펼칠 때 - 새로운 콘텐츠가 보이도록 적당히 스크롤
+    setTimeout(() => {
+      const element = document.getElementById('work');
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const currentScrollY = window.scrollY;
+        // more 버튼 보이는 부분이 화면의 70%정도 되는 지점이라.. 그쯤 위치에서 펼칠 때 밑에 컨텐츠 보이게끔 구현.
+        if (rect.bottom > window.innerHeight * 0.7) {
           window.scrollTo({
-            top: elementBottom - window.innerHeight + 100,
+            top: currentScrollY + 400,
             behavior: 'smooth'
           });
         }
-      }, 350);
-    } else {
-      // 접을 때 - 원래 위치로 스크롤
-      setTimeout(() => {
-        const element = document.getElementById('work');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    }
-  };
+      }
+    }, 350);
+  } else {
+    // 접을 때 - Work 섹션 상단으로
+    setTimeout(() => {
+      const element = document.getElementById('work');
+      if (element) {
+        element.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start',
+          inline: 'nearest'
+        });
+      }
+    }, 100);
+  }
+};
 
   return (
     <section ref={sectionRef} id="work" className="py-20 bg-gray-900 light:bg-white">
