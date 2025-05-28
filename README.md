@@ -4,6 +4,8 @@
 ## 피그마 기획 및 디자인:
 https://www.figma.com/design/7uU8aH5GRU7F1EDLFmRDRP/portfolio?node-id=0-1&t=D41BPSa6BBrO5IOo-1
 
+## 프로젝트 구조
+`
 yeongbi-portfolio/
 ├── src/
 │   ├── components/
@@ -33,4 +35,5 @@ yeongbi-portfolio/
 ├── tsconfig.json                   
 ├── tailwind.config.js              
 ├── postcss.config.js               
-└── README.md        
+└── README.md 
+`
