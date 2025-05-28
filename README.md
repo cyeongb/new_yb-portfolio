@@ -4,6 +4,10 @@
 ## 🎨 피그마 기획 및 디자인:
 https://www.figma.com/design/7uU8aH5GRU7F1EDLFmRDRP/portfolio?node-id=0-1&t=D41BPSa6BBrO5IOo-1
 
+## 📚노션정리 :
+https://www.notion.so/cyeongb/7_-_yeongbi-portfolio-1faaa4605a0b80bd8030e143074faf0c?pvs=4
+
+
 ## 🖼️ 프로젝트 구조
 ```
 yeongbi-portfolio/
