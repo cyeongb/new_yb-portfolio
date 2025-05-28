@@ -52,7 +52,7 @@ const projects: ProjectItem[] = [
     description: [
       '여행 브이로그 컨셉의 웹사이트',
       '제가 여행했던 나라들에서 가 본 맛집을 추천해주는 목적',
-      'background를 youtube 영상에서 embded 해서 가져옴',
+      'background를 youtube 영상에서 embed 해서 가져옴',
       'Google map API 연동하여 해당 지역 연결함',
     ],
     techStack: 'Javascript, 반응형, Google map API, Youtube Iframe API, HTML & CSS',
