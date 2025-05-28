@@ -10,7 +10,6 @@ const experiences: ExperienceItem[] = [
     description: [
       'PLM 6개 사업부 제품 Lifecycle Management 시스템 관리 및 요청사항에 따른 작업. ',
       '6개 사업부 : MEMORY / FOUNDRY / LED / 반도체연구소 / NEW SLSI / 설비연구소',
-      'Oracle DB 작업 + Java Mybatis 백엔드 +  JSP + Javascript 클라이언트 구현. ',
       '사업부간의 필요한 데이터 인터페이스 개발 및 스키마 생성, 데이터 추출 작업',
     ],
     techStack: 'Java , JSP, PL/SQL, Oracle, Javascript, jQuery, MVC, MyBatis'

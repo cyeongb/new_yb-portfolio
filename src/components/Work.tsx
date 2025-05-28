@@ -186,45 +186,59 @@ export const Work = () => {
                 
                 {/* 링크 버튼들 */}
                 <div className="flex items-center space-x-4">
-                  <button className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-200 hover:scale-105 group">
-                    <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                    <span className="text-sm font-medium">
-                      <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                        >
-                          github
-                        </a>
-                    </span>
-                  </button>
-                  <button className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-200 hover:scale-105 group">
-                    <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                    <span className="text-sm font-medium">
-                      <a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                        >
-                          Link
-                        </a>
-                      </span>
-                  </button>
-                  <button className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-red-400 light:hover:text-red-500 transition-all duration-200 hover:scale-105 group">
-                    <Heart className="w-4 h-4 group-hover:scale-110 transition-transform group-hover:fill-current" />
-                    <span className="text-sm font-medium">
-                      <a
-                          href={project.notion}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                        >
-                          Notion
-                        </a>
-                    </span>
-                  </button>
+                  {/* GitHub 링크 */}
+                  {project.githubUrl && project.githubUrl.trim() !== '' ? (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-200 hover:scale-105 group"
+                    >
+                      <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                      <span className="text-sm font-medium">github</span>
+                    </a>
+                  ) : (
+                    <div className="flex items-center space-x-2 text-gray-600 light:text-gray-400 opacity-50 cursor-not-allowed">
+                      <Github className="w-4 h-4" />
+                      <span className="text-sm font-medium">github</span>
+                    </div>
+                  )}
+
+                  {/* Live URL 링크 */}
+                  {project.liveUrl && project.liveUrl.trim() !== '' ? (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-200 hover:scale-105 group"
+                    >
+                      <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                      <span className="text-sm font-medium">Link</span>
+                    </a>
+                  ) : (
+                    <div className="flex items-center space-x-2 text-gray-600 light:text-gray-400 opacity-50 cursor-not-allowed">
+                      <ExternalLink className="w-4 h-4" />
+                      <span className="text-sm font-medium">Link</span>
+                    </div>
+                  )}
+
+                  {/* Notion 링크 */}
+                  {project.notion && project.notion.trim() !== '' ? (
+                    <a
+                      href={project.notion}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-red-400 light:hover:text-red-500 transition-all duration-200 hover:scale-105 group"
+                    >
+                      <Heart className="w-4 h-4 group-hover:scale-110 transition-transform group-hover:fill-current" />
+                      <span className="text-sm font-medium">Notion</span>
+                    </a>
+                  ) : (
+                    <div className="flex items-center space-x-2 text-gray-600 light:text-gray-400 opacity-50 cursor-not-allowed">
+                      <Heart className="w-4 h-4" />
+                      <span className="text-sm font-medium">Notion</span>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -338,45 +352,59 @@ export const Work = () => {
                   
                   {/* 링크 버튼들 */}
                   <div className="flex items-center space-x-4">
-                    <button className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-200 hover:scale-105 group">
-                      <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm font-medium"> 
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                        >
-                          github
-                        </a>
-                        </span>
-                    </button>
-                    <button className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-200 hover:scale-105 group">
-                      <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm font-medium">
-                        <a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                        >
-                          Link
-                        </a>
-                        </span>
-                    </button>
-                    <button className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-red-400 light:hover:text-red-500 transition-all duration-200 hover:scale-105 group">
-                      <Heart className="w-4 h-4 group-hover:scale-110 transition-transform group-hover:fill-current" />
-                      <span className="text-sm font-medium"> 
-                        <a
-                          href={project.notion}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                        >
-                          Notion
-                        </a>
-                      </span>
-                    </button>
+                    {/* GitHub 링크 */}
+                    {project.githubUrl && project.githubUrl.trim() !== '' ? (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-200 hover:scale-105 group"
+                      >
+                        <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                        <span className="text-sm font-medium">github</span>
+                      </a>
+                    ) : (
+                      <div className="flex items-center space-x-2 text-gray-600 light:text-gray-400 opacity-50 cursor-not-allowed">
+                        <Github className="w-4 h-4" />
+                        <span className="text-sm font-medium">github</span>
+                      </div>
+                    )}
+
+                    {/* Live URL 링크 */}
+                    {project.liveUrl && project.liveUrl.trim() !== '' ? (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-purple-400 light:hover:text-purple-600 transition-all duration-200 hover:scale-105 group"
+                      >
+                        <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                        <span className="text-sm font-medium">Link</span>
+                      </a>
+                    ) : (
+                      <div className="flex items-center space-x-2 text-gray-600 light:text-gray-400 opacity-50 cursor-not-allowed">
+                        <ExternalLink className="w-4 h-4" />
+                        <span className="text-sm font-medium">Link</span>
+                      </div>
+                    )}
+
+                    {/* Notion 링크 */}
+                    {project.notion && project.notion.trim() !== '' ? (
+                      <a
+                        href={project.notion}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 text-gray-400 light:text-gray-600 hover:text-red-400 light:hover:text-red-500 transition-all duration-200 hover:scale-105 group"
+                      >
+                        <Heart className="w-4 h-4 group-hover:scale-110 transition-transform group-hover:fill-current" />
+                        <span className="text-sm font-medium">Notion</span>
+                      </a>
+                    ) : (
+                      <div className="flex items-center space-x-2 text-gray-600 light:text-gray-400 opacity-50 cursor-not-allowed">
+                        <Heart className="w-4 h-4" />
+                        <span className="text-sm font-medium">Notion</span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

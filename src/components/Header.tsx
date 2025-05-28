@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+// import { LanguageToggle } from './LanguageToggle';
+// import { useLanguage } from '../context/LanguageContext';
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // const { isKorean } = useLanguage();
+
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
