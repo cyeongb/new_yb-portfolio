@@ -1,33 +1,33 @@
 ## ⭐ Choi Yeongbi Portfolio ⭐
 
 
-## 🎨 피그마 기획 및 디자인:
+## 🎨 Figma plan & Design:
 https://www.figma.com/design/7uU8aH5GRU7F1EDLFmRDRP/portfolio?node-id=0-1&t=D41BPSa6BBrO5IOo-1
 
-## 📚노션정리 :
+## 📚Notion note :
 https://www.notion.so/cyeongb/7_-_yeongbi-portfolio-1faaa4605a0b80bd8030e143074faf0c?pvs=4
 
 
-## 🖼️ 프로젝트 구조
+## 🖼️ Project struct
 ```
 yeongbi-portfolio/
 ├── src/
 │   ├── components/
-│   │   ├── Header.tsx         #헤더
-│   │   ├── About.tsx           # 내소개 페이지
+│   │   ├── Header.tsx         #header
+│   │   ├── About.tsx           # introduce
 │   │   ├── ScrollToTop.tsx     # 스크롤 탑
-│   │   ├── Hero.tsx            # 메인화면
+│   │   ├── Hero.tsx            # main
 │   │   ├── ThemeToggle.tsx     # 테마 토글    
-│   │   ├── Experience.tsx      # 경력 기술 페이지
-│   │   ├── Work.tsx            # 프로젝트 페이지
+│   │   ├── Experience.tsx      # work experience
+│   │   ├── Work.tsx            # project work
 │   │   └── Contact.tsx         #컨택트 페이지
 │   ├── hooks/     
-│   │   └── useTheme.ts  #다크모드(default)/라이트모드      
+│   │   └── useTheme.ts     # dark theme & light theme    
 │   ├── types/
-│   │   └── index.ts          # 타입정의 
-│   ├── App.tsx               #진입점    
+│   │   └── index.ts          # type definition
+│   ├── App.tsx               
 │   ├── main.tsx                    
-│   └── index.css             #스크롤 효과, 반응형, 테마 효과
+│   └── index.css             #scroll, responsive effect
 ├── public/
 │   ├── favicon.ico                 
 │   ├── 각종이미지들..               
